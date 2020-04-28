@@ -5,6 +5,10 @@
 
 > If you don't already have nix installed, run `curl https://nixos.org/nix/install | sh` to install it and then `source ~/.nix-profile/etc/profile.d/nix.sh` to provide access to it in the current shell.
 
+This should work fine on windows 2004+ with Ubuntu, if you are running a lower release or are on another Distro, you may need:
+sudo mkdir /etc/nix; echo 'use-sqlite-wal = false' | sudo tee -a /etc/nix/nix.conf && sh <(curl https://nixos.org/nix/install)
+I did on 1909 with Debian Buster... I also needed to install xz-tools.
+
 ```
 cd <some-directory>
 
